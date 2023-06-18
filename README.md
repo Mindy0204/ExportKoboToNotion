@@ -1,6 +1,8 @@
-# export-kobo-to-notion
+# Export Kobo To Notion
 
-A Node script that exports Kobo highlights to a Notion database. I wrote a detailed writeup of how I wrote this code [on my blog](https://www.juliariec.com/blog/export-kobo-to-notion/).
+A Node script that exports Kobo highlights to a Notion database. 
+
+Reference: [Juliariec/export-kobo-to-notion](https://github.com/juliariec/export-kobo-to-notion/)
 
 ## Prerequisites
 
@@ -13,7 +15,7 @@ You'll also need to configure a Notion "integration" that has access to the data
 1. In your terminal, clone this repository by running the following command:
 
    ```
-   git clone https://github.com/juliariec/export-kobo-to-notion.git
+   git clone https://github.com/Mindy0204/ExportKoboToNotion.git
    ```
 
 1. Navigate inside the folder and run `npm install` to install the necessary modules.
@@ -32,6 +34,6 @@ You'll also need to configure a Notion "integration" that has access to the data
 
 1. Connect your Kobo to your computer and open it in File Explorer. Navigate into the `.kobo` directory and copy the file called `KoboReader.sqlite`, and then paste it into the `export-kobo-to-notion` folder and rename it `highlights.sqlite`.
 
-1. Go to your Notion library database and make sure that the database contains a "Title" property with the name of the book, and a "Highlights" checkbox property which defaults to unchecked. (The script will match books based on the title, and then see if highlights have already been uploaded: if not, it will upload them, and then set the "Highlights" box to checked).
+1. Go to your Notion library database and make sure that the database contains a **"Title" text property** and a **"Highlights" checkbox property** which defaults to unchecked. (The script will see if highlights have already been uploaded: if not, it will upload them, and then set the "Highlights" box to checked).
 
 1. Run the script with the command `npm start`, and then check your Notion database to confirm that it worked.
